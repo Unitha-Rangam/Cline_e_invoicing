@@ -1,0 +1,10 @@
+<deploy>
+  <files>
+    <path>~/FileCabinet/SuiteScripts/vertex_ar_outbound_restlet.js</path>
+    <path>~/FileCabinet/SuiteScripts/vertex_ar_outbound_mr.js</path>
+  </files>
+  <objects>
+    <path>~/Objects/customscript_vertex_ar_outbound_restlet.xml</path>
+    <path>~/Objects/customscript_vertex_ar_outbound_mr.xml</path>
+  </objects>
+</deploy>

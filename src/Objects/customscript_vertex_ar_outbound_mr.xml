@@ -1,0 +1,45 @@
+<mapreducescript scriptid="customscript_vertex_ar_outbound_mr">
+  <description>Vertex AR Outbound Map/Reduce e-Invoice integration (polls for ready AR transactions and triggers UBL payload push to Vertex via Restlet)</description>
+  <name>Vertex AR Outbound MR</name>
+  <scriptfile>[/SuiteScripts/vertex_ar_outbound_mr.js]</scriptfile>
+  <scriptcustomfields>
+    <scriptcustomfield scriptid="custscript_vertex_partner_id">
+      <description>The value for partnerIdentifier used by NetSuite e-Invoicing RESTlets</description>
+      <label>Vertex Partner Identifier</label>
+      <fieldtype>TEXT</fieldtype>
+      <displaytype>NORMAL</displaytype>
+      <ismandatory>T</ismandatory>
+    </scriptcustomfield>
+    <scriptcustomfield scriptid="custscript_vertex_rslt_script_id">
+      <description>Script ID of Vertex Outbound Restlet (for each AR message payload)</description>
+      <label>Vertex Outbound Restlet ScriptID</label>
+      <fieldtype>TEXT</fieldtype>
+      <displaytype>NORMAL</displaytype>
+      <ismandatory>T</ismandatory>
+    </scriptcustomfield>
+    <scriptcustomfield scriptid="custscript_vertex_rslt_deploy_id">
+      <description>Deploy ID of Vertex Outbound Restlet (for each AR message payload)</description>
+      <label>Vertex Outbound Restlet DeployID</label>
+      <fieldtype>TEXT</fieldtype>
+      <displaytype>NORMAL</displaytype>
+      <ismandatory>T</ismandatory>
+    </scriptcustomfield>
+    <scriptcustomfield scriptid="custscript_vertex_demo_mode">
+      <description>Use canned outbound-ready response for demo testing when NetSuite e-Invoicing RESTlets are unavailable.</description>
+      <label>Vertex Demo Mode</label>
+      <fieldtype>CHECKBOX</fieldtype>
+      <displaytype>NORMAL</displaytype>
+    </scriptcustomfield>
+  </scriptcustomfields>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_vertex_ar_outbound_mr">
+      <status>TESTING</status>
+      <title>Vertex AR Outbound MR Deployment</title>
+      <isdeployed>T</isdeployed>
+      <custscript_vertex_partner_id>REPLACE_WITH_PARTNER_ID</custscript_vertex_partner_id>
+      <custscript_vertex_rslt_script_id>customscript_vertex_ar_outbound_restlet</custscript_vertex_rslt_script_id>
+      <custscript_vertex_rslt_deploy_id>customdeploy_vertex_ar_outbound_restlet</custscript_vertex_rslt_deploy_id>
+      <custscript_vertex_demo_mode>T</custscript_vertex_demo_mode>
+    </scriptdeployment>
+  </scriptdeployments>
+</mapreducescript>
