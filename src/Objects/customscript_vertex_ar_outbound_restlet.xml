@@ -64,10 +64,6 @@
       <isdeployed>T</isdeployed>
       <custscript_vertex_api_url>https://api.vertex.example/ubl-endpoint</custscript_vertex_api_url>
       <custscript_vertex_api_key>REPLACE_WITH_VERTEX_API_KEY</custscript_vertex_api_key>
-      <custscript_vertex_token_url>https://auth.vertex.example/oauth/token</custscript_vertex_token_url>
-      <custscript_vertex_client_id>REPLACE_WITH_VERTEX_CLIENT_ID</custscript_vertex_client_id>
-      <custscript_vertex_client_secret>REPLACE_WITH_VERTEX_CLIENT_SECRET</custscript_vertex_client_secret>
-      <custscript_vertex_grant_type>client_credentials</custscript_vertex_grant_type>
       <custscript_vertex_demo_mode>T</custscript_vertex_demo_mode>
     </scriptdeployment>
   </scriptdeployments>
